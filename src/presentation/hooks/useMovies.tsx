@@ -14,8 +14,8 @@ export const useMovies = () => {
   const initialLoad = async() => {
     const nowPlayingPromise = UseCases.moviesNowPlayingUseCase(movieDBFetcher)
     const upComingPromise = UseCases.moviesUpcomingUseCase(movieDBFetcher)
-    const topRatedesPromise = UseCases.moviesUpcomingUseCase(movieDBFetcher)
-    const popularPromise = UseCases.moviesUpcomingUseCase(movieDBFetcher)
+    const topRatedesPromise = UseCases.moviesTopRatedUseCase(movieDBFetcher)
+    const popularPromise = UseCases.popularUseCase(movieDBFetcher)
 
     const [
       nowPlayingMovies,

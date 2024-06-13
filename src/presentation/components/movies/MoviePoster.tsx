@@ -9,7 +9,7 @@ interface Props {
   width?: number;
 }
 
-export const MoviePoster = ({ movie, height = 420, width = 300 }: Props) => {
+export const  MoviePoster = ({ movie, height = 420, width = 300 }: Props) => {
 
   const navigation = useNavigation<NavigationProp<RootStackParams>>()
 
@@ -19,13 +19,13 @@ export const MoviePoster = ({ movie, height = 420, width = 300 }: Props) => {
       style={ ({ pressed }) => ({
         width,
         height,
-        marginHorizontal: 10,
+        marginHorizontal: 4,
         paddingBottom: 20,
         paddingHorizontal: 10,
         opacity: pressed ? 0.9 : 1
       })}
     >
-      <View style={{ ...styles.imageContainer, width: 300, height: 400 }}>
+      <View style={ styles.imageContainer }>
         <Image
           style={ styles.image }
           source={{ uri: movie.poster }}
